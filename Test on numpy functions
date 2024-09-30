@@ -1,0 +1,105 @@
+"1) How do you create a NumPy array?
+-> You can create a NumPy array using the numpy.array() function by passing a list or a sequence.
+
+import numpy as np
+arr = np.array([1, 2, 3, 4])
+print(arr)
+
+"2) How do you create a 2D array (matrix) in NumPy?
+->A 2D array (matrix) is created by passing a list of lists into numpy.array().
+
+matrix = np.array([[1, 2], [3, 4]])
+print(matrix)
+											
+3) How do you find the shape of an array?
+-> The shape of an array gives the number of elements along each axis, which can be found using the .shape() attribute.
+
+print(matrix.shape)
+												
+4) How do you get the data type of a NumPy array?
+-> The data type of the array's elements can be retrieved using the .dtype() attribute.
+
+print(arr.dtype)
+												
+5) How do you slice a NumPy array?
+--> Slicing is done by specifying the start and end indices [start:end] along each dimension.
+
+sliced_arr = arr[1:3]  # Get elements from index 1 to 2
+print(sliced_arr)
+												
+6) How do you add or subtract two NumPy arrays?
+--> NumPy supports element-wise addition and subtraction using + and - operators.
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+add_result = arr1 + arr2
+sub_result = arr1 - arr2
+print(""Addition:"", add_result)
+print(""Subtraction:"", sub_result)
+												
+7) How do you transpose a 2D NumPy array?
+--> Transposing a matrix swaps its rows and columns, achieved using .T().
+
+transpose = matrix.T
+print(transpose)
+												
+8) How do you flatten a NumPy array?
+--> Flattening converts a multi-dimensional array into a 1D array using .flatten().
+
+flattened = matrix.flatten()
+print(flattened)
+												
+9) How do you perform element-wise multiplication in NumPy?
+--> You can multiply two arrays element-wise using the * operator.
+
+mul_result = arr1 * arr2
+print(mul_result)
+												
+10) How do you calculate the sum of elements in a NumPy array?
+--> Use np.sum() to compute the sum of elements.
+
+total_sum = np.sum(arr1)
+print(total_sum)
+												
+11) How do you create an array of evenly spaced values?
+--> You can create an array of evenly spaced values using np.linspace() or np.arange().
+
+even_spaced = np.linspace(0, 10, 5)  # 5 evenly spaced values between 0 and 10
+print(even_spaced)
+
+												
+12) How do you create an array filled with zeros or ones?
+--> Use np.zeros() for an array of zeros and np.ones() for an array of ones.
+
+zeros_array = np.zeros((2, 3))  # 2x3 matrix of zeros
+ones_array = np.ones((3, 2))    # 3x2 matrix of ones
+print(zeros_array)
+print(ones_array)
+												
+13) Give a demonstartions of statistical operation on array
+--> NumPy provides various statistical functions like mean, median, variance, etc.
+
+arr_stat = np.array([1, 2, 3, 4, 5])
+mean_val = np.mean(arr_stat)
+variance_val = np.var(arr_stat)
+std_dev = np.std(arr_stat)
+
+print(""Mean:"", mean_val)
+print(""Variance:"", variance_val)
+print(""Standard Deviation:"", std_dev)"												
+
+14) Why do we need statistical functions ?
+--> Statistical functions help analyze data by providing key metrics like mean, median, variance, etc., which summarize and describe important features of data distributions.
+Statistical functions help in summarizing data, understanding patterns, and performing analytics in arrays. Functions like mean, variance, and standard deviation allow insights into the spread and central tendency of data."												
+
+15) WAP  for variance, std deviation
+--> Variance measures how much data points differ from the mean, while standard deviation is the square root of variance.
+
+data = np.array([10, 20, 30, 40])
+
+variance = np.var(data)
+std_dev = np.std(data)
+
+print(""Variance:"", variance)
+print(""Standard Deviation:"", std_dev)"												
